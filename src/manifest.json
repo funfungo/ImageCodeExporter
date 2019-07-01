@@ -1,0 +1,24 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "exportCode",
+      "identifier": "imagecodeexporter.my-command-identifier",
+	  "script": "./my-command.js",
+	  "shortcut" : "command `",
+      "handlers": {
+        "run": "onRun",
+        "actions": {
+          "Shutdown": "onShutdown"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "ImageCodeExporter",
+    "items": [
+      "imagecodeexporter.my-command-identifier"
+    ]
+  }
+}

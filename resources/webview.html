@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Image Export Code</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="content">
+      <!-- <div class="title" data-app-region="drag">Image Export Code</div> -->
+      <div class="setting__content">
+
+        <div class="setting__config">
+          <div class="setting__item">
+            <div class="setting__label">尺寸</div>
+            <div class="setting__select">
+              <select name="" id="selectScale">
+                <option value="2">2X</option>
+                <option value="1">1X</option>
+              </select>
+            </div>
+          </div>
+          <div class="setting__item">
+            <div class="setting__label">图片格式</div>
+            <div class="setting__select">
+              <select name="" id="selectFormat">
+                <option value="png">PNG</option>
+                <option value="svg">SVG</option>
+              </select>
+            </div>
+          </div>
+          <div class="setting__item">
+            <div class="setting__label">使用方式</div>
+            <div class="setting__select">
+              <select name="" id="selectUse">
+                <option value="bg">background</option>
+                <option value="mask">mask</option>
+                <option value="innerHtml">innerHtml</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="img__preview">
+          <img src="" id="imgPreview" />
+        </div>
+      </div>
+
+      <div class="output">
+        <textarea
+          class="textarea"
+          id="code"
+          placeholder="Image Export Code"
+          disabled
+        ></textarea>
+        <div class="output__loading" id="loading"></div>
+      </div>
+
+      <div class="action">
+        <div class="action__button" id="closeBtn">关闭</div>
+        <div class="action__button" id="copyBtn">复制</div>
+      </div>
+    </div>
+
+    <!-- notice the "../" here. It's because webview.js will be compiled in a different folder -->
+    <script src="../webview.js"></script>
+  </body>
+</html>
