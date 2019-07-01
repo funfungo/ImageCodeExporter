@@ -12,7 +12,7 @@ import {
 } from './svgo';
 
 const webviewIdentifier = 'imagecodeexporter.webview';
-const pluginIdentifier = 'com.nikkifang.imagecodeexporter';
+const pluginIdentifier = 'com.funfungo.imagecodeexporter';
 let layerInfo = {};
 let webContents;
 let layer;
