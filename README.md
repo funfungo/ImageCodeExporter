@@ -7,7 +7,7 @@ Export your sketch layer for code usage
 Choose the layer you want to export
 <br>
 Use shortcut `command(⌘) + ` ` to export your code immediately<br>
-<img src="/doc/img/main.png" alt="test" width="100" height="200">
+<img src="/doc/img/main.png" alt="test" width="300">
 
 ------------
 
