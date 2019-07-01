@@ -8,7 +8,7 @@ Choose the layer you want to export
 <br>
 Use shortcut `command(⌘) + ` ` to export your code immediately
 
-![UI](/doc/img/main.png =350x)
+![UI](./doc/img/main.png =350x)
 
 ------------
 
