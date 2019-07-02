@@ -1,12 +1,13 @@
 {
   "compatibleVersion": 3,
   "bundleVersion": 1,
+  "appcast": "https://raw.githubusercontent.com/funfungo/ImageCodeExporter/master/.appcast.xml",
   "commands": [
     {
       "name": "exportCode",
       "identifier": "imagecodeexporter.my-command-identifier",
-	  "script": "./my-command.js",
-	  "shortcut" : "command `",
+      "script": "./my-command.js",
+      "shortcut": "command `",
       "handlers": {
         "run": "onRun",
         "actions": {
@@ -17,8 +18,6 @@
   ],
   "menu": {
     "title": "ImageCodeExporter",
-    "items": [
-      "imagecodeexporter.my-command-identifier"
-    ]
+    "items": ["imagecodeexporter.my-command-identifier"]
   }
 }
