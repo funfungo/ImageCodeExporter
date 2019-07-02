@@ -1,5 +1,247 @@
-!function(e){var n={};function t(a){if(n[a])return n[a].exports;var i=n[a]={i:a,l:!1,exports:{}};return e[a].call(i.exports,i,i.exports,t),i.l=!0,i.exports}t.m=e,t.c=n,t.d=function(e,n,a){t.o(e,n)||Object.defineProperty(e,n,{enumerable:!0,get:a})},t.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.t=function(e,n){if(1&n&&(e=t(e)),8&n)return e;if(4&n&&"object"==typeof e&&e&&e.__esModule)return e;var a=Object.create(null);if(t.r(a),Object.defineProperty(a,"default",{enumerable:!0,value:e}),2&n&&"string"!=typeof e)for(var i in e)t.d(a,i,function(n){return e[n]}.bind(null,i));return a},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},t.p="",t(t.s="./resources/webview.js")}({"./resources/webview.js":
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./resources/webview.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./resources/webview.js":
 /*!******************************!*\
   !*** ./resources/webview.js ***!
   \******************************/
-/*! no static exports found */function(e,n){var t=document.getElementById("selectScale"),a=document.getElementById("selectFormat"),i=document.getElementById("selectUse"),c=document.getElementById("imgPreview"),o=document.getElementById("loading"),r=document.getElementById("copyBtn"),l=document.getElementById("closeBtn"),g="2",s="png",d="bg",m={},u={};function p(){document.getElementById("code").value=u["".concat(s,"_").concat(d)]}function v(e){return e.replace(/^<\?xml.*?>/gim,"").replace(/<\!\-\-(.*(?=\-\->))\-\->/gim,"").replace(/[\r\n]/gim,"").replace(/(\r\n|\n|\r)$/,"").replace(/\t/gim," ").replace(/%/gim,"%25").replace(/</gim,"%3C").replace(/>/gim,"%3E").replace(/#/gim,"%23").replace(/\"/gim,"'")}t.onchange=function(){g=t.value,console.log("selectScale:"+g),c.style.width=m.width+"px",window.postMessage("generateCode",g)},a.onchange=function(){s=a.value,t.disabled="svg"===s,p(),console.log("selectFormat:"+s)},i.onchange=function(){d=i.value,p()},r.addEventListener("click",function(){var e=document.getElementById("code").value;window.postMessage("changeConfig",g,s,d),window.postMessage("copy",e)}),l.addEventListener("click",function(){window.postMessage("close")}),window.sendCode=function(e){o.style.display="none",m=e,c.src="data:image/png;base64,"+e.bitmap,m.imgSrc="data:image/png;base64,"+e.bitmap,m.innerHtmlImg='<img src="data:image/png;base64,'.concat(e.bitmap,'">'),m.innerHtmlSvg=e.svgXml,m.pngBg=function(e){return"display: inline-block;\n  vertical-align: middle;\n  width: ".concat(e.width,"px;\n  height: ").concat(e.height,'px;\n  background-size: cover;\n  background-image: url("data:image/png;base64,').concat(e.bitmap,'");').replace(/^ +/gm,"")}(e),m.svgBg=function(e){var n=v(e.svgXml);return"display: inline-block;\n  vertical-align: middle;\n  width: ".concat(e.width,"px;\n  height: ").concat(e.height,'px;\n  background-size: cover;\n  background-image: url("data:image/svg+xml,').concat(n,'");').replace(/^ +/gm,"")}(e),m.svgMask=function(e){var n=v(e.svgXml);return"display: inline-block;\n  vertical-align: middle;\n  width: ".concat(e.width,"px;\n  height: ").concat(e.height,'px;\n  -webkit-mask: url("data:image/svg+xml,').concat(n,'") no-repeat 50% 50%;\n  mask: url("data:image/svg+xml,').concat(n,'") no-repeat 50% 50%;\n  -webkit-mask-size: cover;\n  mask-size: cover;\n  background-color: currentColor;').replace(/^ +/gm,"")}(e),m.pngMask=function(e){return"display: inline-block;\n  vertical-align: middle;\n  width: ".concat(e.width,"px;\n  height: ").concat(e.height,'px;\n  -webkit-mask: url("data:image/png;base64,').concat(e.bitmap,'") no-repeat 50% 50%;\n  mask: url("data:image/png;base64,').concat(e.bitmap,'") no-repeat 50% 50%;\n  -webkit-mask-size: cover;\n  mask-size: cover;\n  background-color: currentColor;').replace(/^ +/gm,"")}(e),c.style.width=m.width+"px",u={svg_bg:m.svgBg,svg_innerHtml:m.innerHtmlSvg,svg_mask:m.svgMask,png_bg:m.pngBg,png_innerHtml:m.innerHtmlImg,png_mask:m.pngMask},p()},window.sendConfig=function(e){t.value=e.scale,a.value=e.format,i.value=e.usage,g=e.scale,s=e.format,d=e.usage,t.disabled="svg"===s,window.postMessage("generateCode",g,s,d)}}});
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// disable the context menu (eg. the right click menu) to have a more native feel
+var selectScale = document.getElementById('selectScale');
+var selectFormat = document.getElementById('selectFormat');
+var selectUse = document.getElementById('selectUse');
+var imgPreview = document.getElementById('imgPreview');
+var loading = document.getElementById('loading');
+var copyBtn = document.getElementById('copyBtn');
+var closeBtn = document.getElementById('closeBtn');
+var scale = '2',
+    format = 'png',
+    usage = 'bg',
+    layerInfo = {},
+    codeMap = {};
+
+selectScale.onchange = function () {
+  scale = selectScale.value;
+  console.log('selectScale:' + scale);
+  imgPreview.style.width = layerInfo.width + 'px';
+  changeScale();
+};
+
+selectFormat.onchange = function () {
+  format = selectFormat.value;
+
+  if (format === 'svg') {
+    selectScale.disabled = true;
+  } else {
+    selectScale.disabled = false;
+  }
+
+  changeCode();
+  console.log('selectFormat:' + format);
+};
+
+selectUse.onchange = function () {
+  usage = selectUse.value;
+  changeCode();
+};
+
+copyBtn.addEventListener('click', copy);
+closeBtn.addEventListener('click', close);
+
+function copy() {
+  var text = document.getElementById('code').value;
+  changeConfig();
+  window.postMessage('copy', text);
+}
+
+function close() {
+  window.postMessage('close');
+}
+
+function getPngBackground(data) {
+  var code = "display: inline-block;\n  vertical-align: middle;\n  width: ".concat(data.width, "px;\n  height: ").concat(data.height, "px;\n  background-size: cover;\n  background-image: url(\"data:image/png;base64,").concat(data.bitmap, "\");");
+  return code.replace(/^ +/gm, '');
+}
+
+function getSvgBackground(data) {
+  var build = buildSvgDataURI(data.svgXml);
+  var code = "display: inline-block;\n  vertical-align: middle;\n  width: ".concat(data.width, "px;\n  height: ").concat(data.height, "px;\n  background-size: cover;\n  background-image: url(\"data:image/svg+xml,").concat(build, "\");");
+  return code.replace(/^ +/gm, '');
+}
+
+function getSvgMask(data) {
+  var build = buildSvgDataURI(data.svgXml);
+  var code = "display: inline-block;\n  vertical-align: middle;\n  width: ".concat(data.width, "px;\n  height: ").concat(data.height, "px;\n  -webkit-mask: url(\"data:image/svg+xml,").concat(build, "\") no-repeat 50% 50%;\n  mask: url(\"data:image/svg+xml,").concat(build, "\") no-repeat 50% 50%;\n  -webkit-mask-size: cover;\n  mask-size: cover;\n  background-color: currentColor;");
+  return code.replace(/^ +/gm, '');
+}
+
+function getPngMask(data) {
+  var code = "display: inline-block;\n  vertical-align: middle;\n  width: ".concat(data.width, "px;\n  height: ").concat(data.height, "px;\n  -webkit-mask: url(\"data:image/png;base64,").concat(data.bitmap, "\") no-repeat 50% 50%;\n  mask: url(\"data:image/png;base64,").concat(data.bitmap, "\") no-repeat 50% 50%;\n  -webkit-mask-size: cover;\n  mask-size: cover;\n  background-color: currentColor;");
+  return code.replace(/^ +/gm, '');
+}
+
+function changeScale() {
+  window.postMessage('generateCode', scale);
+}
+
+function changeConfig() {
+  window.postMessage('changeConfig', scale, format, usage);
+}
+
+var actions = {};
+
+function changeCode() {
+  document.getElementById('code').value = codeMap["".concat(format, "_").concat(usage)];
+}
+/**
+ * Returns encoded string of svg file.
+ * @method buildSvgDataURI
+ * @param {String} data Contents of svg file.
+ */
+
+
+function buildSvgDataURI(svgContent) {
+  return svgContent.replace(/^<\?xml.*?>/gim, '') // Xml declaration
+  .replace(/<\!\-\-(.*(?=\-\->))\-\->/gim, '') // Comments
+  .replace(/[\r\n]/gim, '') // Line breaks
+  .replace(/(\r\n|\n|\r)$/, '') // New line end of file
+  .replace(/\t/gim, ' ') // Tabs (replace with space)
+  .replace(/%/gim, '%25') // %
+  .replace(/</gim, '%3C') // <
+  .replace(/>/gim, '%3E') // >
+  .replace(/#/gim, '%23') // #
+  .replace(/\"/gim, "'"); // "
+} // call the wevbiew from the plugin
+
+
+window.sendCode = function (data) {
+  loading.style.display = 'none';
+  layerInfo = data;
+  imgPreview.src = 'data:image/png;base64,' + data.bitmap;
+  layerInfo.imgSrc = 'data:image/png;base64,' + data.bitmap;
+  layerInfo.innerHtmlImg = "<img src=\"data:image/png;base64,".concat(data.bitmap, "\">");
+  layerInfo.innerHtmlSvg = data.svgXml;
+  layerInfo.pngBg = getPngBackground(data);
+  layerInfo.svgBg = getSvgBackground(data);
+  layerInfo.svgMask = getSvgMask(data);
+  layerInfo.pngMask = getPngMask(data);
+  imgPreview.style.width = layerInfo.width + 'px';
+  codeMap = {
+    'svg_bg': layerInfo.svgBg,
+    'svg_innerHtml': layerInfo.innerHtmlSvg,
+    'svg_mask': layerInfo.svgMask,
+    'png_bg': layerInfo.pngBg,
+    'png_innerHtml': layerInfo.innerHtmlImg,
+    'png_mask': layerInfo.pngMask
+  };
+  changeCode();
+};
+
+window.sendConfig = function (data) {
+  selectScale.value = data.scale;
+  selectFormat.value = data.format;
+  selectUse.value = data.usage;
+  scale = data.scale;
+  format = data.format;
+  usage = data.usage;
+
+  if (format === 'svg') {
+    selectScale.disabled = true;
+  } else {
+    selectScale.disabled = false;
+  }
+
+  window.postMessage('generateCode', scale, format, usage);
+};
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=webview.js.map
