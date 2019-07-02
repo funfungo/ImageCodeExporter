@@ -1,7 +1,6 @@
 # Image Code Exporter
 Export your sketch layer for code usage
 
-------------
 
 ## Usage
 Choose the layer you want to export
@@ -9,7 +8,6 @@ Choose the layer you want to export
 Use shortcut ``` command(⌘) + ` ``` to export your code immediately<br>
 <img src="/doc/img/main.png" alt="test" width="500">
 
-------------
 
 ## Feature
 
@@ -17,7 +15,6 @@ Use shortcut ``` command(⌘) + ` ``` to export your code immediately<br>
 - Compress SVG file widh [svgo](https://github.com/svg/svgo)
 
 
-------------
 
 ## Installation
 
