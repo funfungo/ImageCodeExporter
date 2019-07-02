@@ -21,6 +21,9 @@ Export your sketch layer for code usage<br>
   提供多种代码使用场景模板，包括在html中嵌入的代码(innerHtml),
   css background或css mask
 
+- Auto save your last copy preference <br>
+  自动保存你上一次复制的选项
+
 - Compress PNG file with [advpng](https://github.com/amadvance/advancecomp)<br>
   使用[advpng](https://github.com/amadvance/advancecomp)压缩PNG文件
 
