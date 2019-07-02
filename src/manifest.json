@@ -1,6 +1,7 @@
 {
   "compatibleVersion": 3,
   "bundleVersion": 1,
+  "version": "3.6.1",
   "appcast": "https://raw.githubusercontent.com/funfungo/ImageCodeExporter/master/.appcast.xml",
   "commands": [
     {
