@@ -1,6 +1,6 @@
 {
   "name": "imagecodeexporter",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "A Plugin that export your sketch layer for code usage",
   "engines": {
     "sketch": ">=3.0"
@@ -37,7 +37,7 @@
   },
   "author": "funfungo <funfungo@foxmail.com>",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/funfungo/ImageCodeExporter.git"
+    "type": "git",
+    "url": "https://github.com/funfungo/ImageCodeExporter.git"
   }
 }
