@@ -151,6 +151,9 @@ function exportLayerAsBitmap(document, layer, scale, type) {
   slice.page = document.currentPage();
   slice.format = type;
   slice.scale = scale;
+  slice.setRect(rect.rect());
+  slice.setShouldTrim(false);
+  slice.setSaveForWeb(1);
   document.saveArtboardOrSlice_toFile(slice, path);
   let originalFileSize = fs.statSync(path).size;
 
