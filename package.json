@@ -35,5 +35,9 @@
     "sketch-module-web-view": "^3.0.1",
     "svgo": "^1.2.2"
   },
-  "author": "funfungo <funfungo@foxmail.com>"
+  "author": "funfungo <funfungo@foxmail.com>",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/funfungo/ImageCodeExporter.git"
+  }
 }
