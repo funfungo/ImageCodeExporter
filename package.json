@@ -1,6 +1,6 @@
 {
   "name": "imagecodeexporter",
-  "version": "3.6.0",
+  "version": "3.6.1",
   "description": "A Plugin that export your sketch layer for code usage",
   "engines": {
     "sketch": ">=3.0"
