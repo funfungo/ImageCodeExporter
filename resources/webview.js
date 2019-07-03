@@ -64,7 +64,7 @@ function getSvgBackground(data) {
   width: ${data.width}px;
   height: ${data.height}px;
   background-size: cover;
-  background-image: url("data:image/svg+xml,${build}");`;
+  background-image: url("data:image/svg+xml;charset=utf8,${build}");`;
   return code.replace(/^ +/gm, '');
 }
 
@@ -74,8 +74,8 @@ function getSvgMask(data) {
   vertical-align: middle;
   width: ${data.width}px;
   height: ${data.height}px;
-  -webkit-mask: url("data:image/svg+xml,${build}") no-repeat 50% 50%;
-  mask: url("data:image/svg+xml,${build}") no-repeat 50% 50%;
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,${build}") no-repeat 50% 50%;
+  mask: url("data:image/svg+xml;charset=utf8,${build}") no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
   background-color: currentColor;`;
