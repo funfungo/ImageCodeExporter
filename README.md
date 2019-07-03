@@ -1,6 +1,6 @@
 # Image Code Exporter
-Export your sketch layer for code usage<br>
-以代码的形式导出sketch中的图层
+Export your sketch layer with data URI for code usage<br>
+以data URI代码形式导出sketch中的图层
 
 
 ## Usage
@@ -14,8 +14,8 @@ Export your sketch layer for code usage<br>
 
 
 ## Feature
-- Support PNG and SVG image type<br>
-  支持PNG和SVG图片格式
+- Support PNG and SVG image type, export PNG code by encoding it with base64 format while using encoded xml when export SVG code.(See this article [Probably Don’t Base64 SVG](https://css-tricks.com/probably-dont-base64-svg/) )<br>
+  支持PNG和SVG图片格式, 以base64格式导出PNG图片，以XML格式导出SVG文件（为什么不用base64导出SVG,看这篇文章 [Probably Don’t Base64 SVG](https://css-tricks.com/probably-dont-base64-svg/) ）
 
 - Provide multiple templates for different usage, including code in html(innerHtml), css background and css mask.<br>
   提供多种代码使用场景模板，包括在html中嵌入的代码(innerHtml),
