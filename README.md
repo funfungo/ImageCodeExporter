@@ -41,8 +41,8 @@ Export your sketch layer with data URI for code usage<br>
 - Double-click on imagecodeexporter.sketchplugin<br>
   双击imagecodeexporter.sketchplugin
   
-- You may need to allow the plugin to access your system in "Security & Privacy"
-  可能需要在系统中设置插件的权限
+- You may need to allow the plugin to access your system in "Security & Privacy"<br>
+  可能需要在系统设置"安全与权限"中设置插件的权限
 
 ## Acknowledgements
 Thanks to these project to give me some ideas about how to make this plugin
